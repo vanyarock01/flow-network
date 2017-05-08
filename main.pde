@@ -2,6 +2,9 @@ ArrayList<Vertex> VertexList;
 ArrayList<Edge> EdgeList;
 String drawState = "unable";
 int xAr, yAr;
+int space = 80;
+String addState = "vertex";
+
 void setup()
 {
   
@@ -14,7 +17,6 @@ void setup()
   background(0);
   VertexList.add (new Vertex(200,300));
   VertexList.add (new Vertex(1000,300));
-  addEdge(0, 1);
 }
 
 void draw()
@@ -26,10 +28,18 @@ void draw()
   for(int i = 0; i < EdgeList.size(); i++) {
     EdgeList.get(i).show();
   }
-   
+  menu();
 }
 void addEdge(int from, int to)
 {
   EdgeList.add (new Edge(from, to));
 
+}
+
+void menu()
+{
+ fill(255);
+ rect(20, 20, 70, 50);
+ fill(255);
+ rect(120, 20, 70, 50);
 }
