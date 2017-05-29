@@ -1,0 +1,112 @@
+/* === Shared === */
+a {
+  color: #9476AB;
+}
+#app-container {
+  text-align: center;
+  text-rendering: geometricPrecision;
+}
+textarea {
+  text-align: center;
+  display:block;
+  margin: auto;
+}
+textarea.dialog {
+  height: 2.5em;
+}
+
+.maxflow {
+  color: #FFFEFF;
+  text-align: center;
+
+  display:block;
+  margin:auto;
+}
+
+text {
+  font: 13px sans-serif;
+  pointer-events: none;
+}
+
+/* SVG Elements */
+svg {
+  background-color: #FFFEFF;
+  cursor: default;
+  border: solid;
+  border-width: 10px;
+  border-color: #554773;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.node {
+  text-anchor: middle;
+}
+.node circle {
+  stroke-width: 4px;
+}
+
+.link text {
+  text-anchor: middle;
+  dominant-baseline: text-after-edge;
+}
+path.link {
+  color: #20192F;
+  stroke: #666;
+  stroke-width: 2px;
+}
+
+/* === Editor === */
+svg.editor:not(.active):not(.ctrl) {
+  cursor: crosshair;
+}
+
+.editor .node circle {
+  cursor: pointer;
+}
+.editor .node.selected circle {
+  stroke-width: 2.5px;
+}
+
+.editor .link {
+  cursor: pointer;
+}
+.editor .link .halo {
+  stroke-width: 15px !important;
+  stroke: transparent !important;
+}
+.editor path.selected.link {
+  stroke-dasharray: 10,2;
+}
+
+/* Dragline */
+.editor path.hidden.link {
+  stroke-width: 0;
+}
+.editor path.dragline.link {
+  pointer-events: none;
+}
+
+/* === Show Steps === */
+.link.sending path {
+  stroke-width: 3px;
+  stroke: steelblue;
+}
+.link.resending path {
+  stroke-width: 3px;
+  stroke: brown;
+}
+.link.sending path{
+  stroke-width: 3px;
+  stroke: steelblue;
+}
+.link.sending {
+  fill: steelblue;
+}
+.link.resending {
+  fill: brown;
+}
